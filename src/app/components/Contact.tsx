@@ -68,7 +68,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.a
-            href="../../imports/Christina_Khachan_CV.pdf"
+            href="/Christina_Khachan_CV.pdf"
             download="Christina_Khachan_CV.pdf"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
