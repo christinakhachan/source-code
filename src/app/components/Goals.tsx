@@ -17,7 +17,7 @@ export default function Goals() {
   };
 
   return (
-    <section id="goals" className="py-24 px-6 sm:px-12 bg-stone-50 scroll-mt-10">
+    <section id="goals" className="py-28 px-6 sm:px-12 bg-stone-50 scroll-mt-10 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -26,13 +26,13 @@ export default function Goals() {
           transition={{ duration: 1 }}
           className="w-full md:w-1/2"
         >
-          <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden group">
+          <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden group shadow-xl border border-white/70">
             <ImageWithFallback 
               src="https://images.unsplash.com/photo-1763136524650-376409b665a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNhbG0lMjBtaW5kfGVufDF8fHx8MTc3ODA4ODA5M3ww&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Abstract calm mind"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-stone-900/10 transition-opacity duration-500 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-[#3f2b52]/10 transition-opacity duration-500 group-hover:opacity-0" />
           </div>
         </motion.div>
 
@@ -55,7 +55,7 @@ export default function Goals() {
             </motion.p>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              <motion.div variants={itemVariants} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+              <motion.div variants={itemVariants} whileHover={{ y: -6 }} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
                 <div className="mb-4 bg-orange-100 p-3 rounded-xl inline-block text-orange-600">
                   <Target className="w-6 h-6" />
                 </div>
@@ -63,7 +63,7 @@ export default function Goals() {
                 <p className="text-stone-500 font-light text-sm">Gain practical experience through internships and training in CBT and trauma. Develop strong assessment and therapeutic skills.</p>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+              <motion.div variants={itemVariants} whileHover={{ y: -6 }} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
                 <div className="mb-4 bg-teal-100 p-3 rounded-xl inline-block text-teal-600">
                   <Sparkles className="w-6 h-6" />
                 </div>

@@ -10,6 +10,8 @@ import Portfolio from "./components/Portfolio";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import StarBackground from "./components/StarBackground";
+import CartoonCompanion from "./components/CartoonCompanion";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -20,13 +22,14 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 font-['Outfit',sans-serif] selection:bg-teal-200 overflow-hidden">
+    <div className="min-h-screen bg-stone-50 text-stone-800 font-['Outfit',sans-serif] selection:bg-teal-200 overflow-x-hidden relative">
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-teal-600 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-teal-600 origin-left z-[60]"
         style={{ scaleX }}
       />
       
-      <main className="flex flex-col relative w-full pb-20">
+      <main className="flex flex-col relative z-10 w-full pb-20">
+        <StarBackground />
         <Hero />
         <TableOfContents />
         <Goals />
@@ -43,6 +46,7 @@ export default function App() {
         <Skills />
         <Contact />
       </main>
+      <CartoonCompanion />
     </div>
   );
 }

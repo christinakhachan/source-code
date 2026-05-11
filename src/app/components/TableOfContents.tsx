@@ -19,7 +19,7 @@ export default function TableOfContents() {
   };
 
   return (
-    <section className="py-16 px-6 sm:px-12 bg-stone-100/50">
+    <section className="py-20 px-6 sm:px-12 bg-stone-100/50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export default function TableOfContents() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02, x: 5 }}
+              whileHover={{ scale: 1.025, x: 6, y: -3 }}
               className="group w-full flex items-center justify-between p-5 bg-white rounded-2xl shadow-sm border border-stone-100 hover:border-teal-200 hover:shadow-md transition-all text-left"
             >
               <span className="text-lg font-medium text-stone-700 group-hover:text-teal-700 transition-colors">

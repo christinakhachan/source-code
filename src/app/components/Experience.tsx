@@ -34,7 +34,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-24 px-6 sm:px-12 bg-stone-100">
+    <section className="py-28 px-6 sm:px-12 bg-stone-100 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,6 +59,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ y: -8, scale: 1.01 }}
               className={`${exp.color} p-8 sm:p-10 rounded-[2rem] hover:shadow-lg transition-all duration-300`}
             >
               <div className="flex items-center gap-4 mb-6">

@@ -100,7 +100,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-6 sm:px-12 bg-stone-50 scroll-mt-10"
+      className="py-28 px-6 sm:px-12 bg-stone-50 scroll-mt-10 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -130,6 +130,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8, scale: 1.015 }}
               className={`group block p-8 rounded-3xl transition-all duration-300 ${item.color}`}
             >
               <div

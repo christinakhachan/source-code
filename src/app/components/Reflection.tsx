@@ -3,16 +3,15 @@ import { MessageCircleHeart } from "lucide-react";
 
 export default function Reflection() {
   return (
-    <section id="reflection" className="py-24 px-6 sm:px-12 bg-stone-100 scroll-mt-10">
+    <section id="reflection" className="py-28 px-6 sm:px-12 bg-stone-100 scroll-mt-10">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
+          whileHover={{ y: -4 }}
           className="bg-white p-10 sm:p-16 rounded-[3rem] shadow-sm relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-bl-[100px] -z-0 opacity-50" />
-          
           <div className="relative z-10">
             <div className="mb-8 p-4 bg-orange-100 text-orange-600 rounded-2xl inline-block">
               <MessageCircleHeart className="w-8 h-8" />

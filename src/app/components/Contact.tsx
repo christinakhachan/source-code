@@ -3,17 +3,7 @@ import { motion } from "motion/react";
 
 export default function Contact() {
   return (
-    <section className="py-24 px-6 sm:px-12 bg-stone-50 relative overflow-hidden">
-      {/* Background visual element */}
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] max-w-[800px] aspect-square bg-orange-100/50 rounded-full blur-[100px] pointer-events-none"
-      />
-
+    <section className="py-28 px-6 sm:px-12 bg-stone-50 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +31,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.03, y: -6 }}
             className="flex flex-col items-center gap-3 p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group"
           >
             <div className="p-4 bg-teal-50 text-teal-600 rounded-full group-hover:bg-teal-600 group-hover:text-white transition-colors">
@@ -58,7 +48,8 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col items-center gap-3 p-8 bg-white rounded-3xl shadow-sm"
+            whileHover={{ scale: 1.03, y: -6 }}
+            className="flex flex-col items-center gap-3 p-8 bg-white rounded-3xl shadow-sm transition-all"
           >
             <div className="p-4 bg-orange-50 text-orange-600 rounded-full">
               <Phone className="w-6 h-6" />
@@ -74,7 +65,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.03, y: -6 }}
             className="flex flex-col items-center gap-3 p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
           >
             <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-stone-300 group-hover:text-stone-900 transition-colors" />
@@ -95,7 +86,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.03, y: -6 }}
             className="flex flex-col items-center gap-3 p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
           >
             <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-stone-300 group-hover:text-stone-900 transition-colors" />

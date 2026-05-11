@@ -12,15 +12,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="py-24 px-6 sm:px-12 bg-stone-900 text-stone-50 overflow-hidden relative">
-      <motion.div
-        animate={{
-          rotate: [0, 360],
-        }}
-        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-1/2 -left-1/4 w-[100vw] h-[100vw] border-[1px] border-stone-800 rounded-full opacity-50 pointer-events-none"
-      />
-      
+    <section className="skills-section py-28 px-6 sm:px-12 bg-[#2b2136] text-stone-50 overflow-hidden relative">
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +32,7 @@ export default function Skills() {
               viewport={{ once: true, margin: "-100px" }}
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="px-6 py-4 rounded-full border border-stone-700 bg-stone-800/50 backdrop-blur-sm text-stone-300 font-light cursor-default hover:border-teal-500 hover:text-teal-400 hover:bg-stone-800 transition-all text-lg"
+              className="px-6 py-4 rounded-full border border-white/70 bg-white/90 backdrop-blur-sm text-[#3f2b52] shadow-sm font-light cursor-default hover:border-white hover:text-[#2f1f3f] hover:bg-white transition-all text-lg"
             >
               {skill}
             </motion.div>

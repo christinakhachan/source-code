@@ -6,28 +6,6 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col justify-center px-6 sm:px-12 overflow-hidden bg-stone-50">
-      {/* Background Animated Blobs */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 90, 0],
-          x: [0, 50, 0],
-          y: [0, -50, 0]
-        }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-teal-100/50 blur-3xl z-0 pointer-events-none"
-      />
-      <motion.div
-        animate={{
-          scale: [1, 1.5, 1],
-          rotate: [0, -90, 0],
-          x: [0, -30, 0],
-          y: [0, 40, 0]
-        }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-orange-100/40 blur-3xl z-0 pointer-events-none"
-      />
-
       <div className="relative z-10 max-w-5xl mx-auto w-full mt-12 md:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex items-center gap-3 mb-8"
         >
-          <div className="p-3 bg-teal-50 rounded-2xl">
+          <div className="p-3 bg-teal-50 rounded-2xl shadow-sm">
             <BrainCircuit className="w-6 h-6 text-teal-700" />
           </div>
           <span className="text-teal-700 font-medium tracking-wide uppercase text-sm">Portfolio</span>
@@ -46,7 +24,8 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="shrink-0 w-32 h-32 sm:w-48 sm:h-48 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white rotate-3"
+            whileHover={{ scale: 1.04, rotate: 1 }}
+            className="shrink-0 w-32 h-32 sm:w-48 sm:h-48 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/80 rotate-3"
           >
             <ImageWithFallback 
               src={profilePic}
@@ -70,7 +49,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-white/60 backdrop-blur-md p-6 sm:p-8 rounded-[2rem] border border-stone-200/50 shadow-sm"
+          whileHover={{ y: -4 }}
+          className="bg-white/70 backdrop-blur-xl p-6 sm:p-8 rounded-[2rem] border border-stone-200/50 shadow-sm"
         >
           <h3 className="text-sm font-medium tracking-widest uppercase text-teal-700 mb-4">Career Summary</h3>
           <p className="text-base sm:text-xl text-stone-700 leading-relaxed font-light">
