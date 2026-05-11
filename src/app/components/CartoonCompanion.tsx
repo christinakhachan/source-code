@@ -4,14 +4,15 @@ export default function CartoonCompanion() {
   return (
     <aside
       aria-hidden="true"
-      style={{
-        position: "fixed",
-        right: "14px",
-        bottom: "0",
-        zIndex: 9999,
-        width: "clamp(88px, 10vw, 170px)",
-        pointerEvents: "none",
-      }}
+      // style={{
+      //   position: "fixed",
+      //   right: "14px",
+      //   bottom: "0px",
+      //   zIndex: 9999,
+      //   width: "clamp(88px, 10vw, 170px)",
+      //   pointerEvents: "none",
+      // }}
+      className="!fixed right-[14px] bottom-0 z-[9999] w-[clamp(100px,12vw,200px)] pointer-events-none"
     >
       <img
         src={companionImage}
