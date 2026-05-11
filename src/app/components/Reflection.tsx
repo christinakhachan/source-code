@@ -1,9 +1,12 @@
-import { motion } from "motion/react";
 import { MessageCircleHeart } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Reflection() {
   return (
-    <section id="reflection" className="py-28 px-6 sm:px-12 bg-stone-100 scroll-mt-10">
+    <section
+      id="reflection"
+      className="py-28 px-6 sm:px-12 bg-stone-100 scroll-mt-10"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,10 +20,17 @@ export default function Reflection() {
               <MessageCircleHeart className="w-8 h-8" />
             </div>
 
-            <h2 className="text-4xl font-['Playfair_Display',serif] text-stone-900 mb-8">Course Reflection</h2>
-            
+            <h2 className="text-4xl font-['Playfair_Display'] text-stone-900">
+              Course Reflection
+            </h2>
+
             <p className="text-lg sm:text-xl text-stone-700 leading-relaxed font-light">
-              In Work Ready Now, I improved my communication by practicing presentations and class discussions. I learned to explain ideas more clearly and simply, especially psychological concepts. The course helped me become more confident, organized, and audience-focused—skills that are essential for a career in psychology.
+              In Work Ready Now, I improved my communication by practicing
+              presentations and class discussions. I learned to explain ideas
+              more clearly and simply, especially psychological concepts. The
+              course helped me become more confident, organized, and
+              audience-focused—skills that are essential for a career in
+              psychology.
             </p>
           </div>
         </motion.div>
